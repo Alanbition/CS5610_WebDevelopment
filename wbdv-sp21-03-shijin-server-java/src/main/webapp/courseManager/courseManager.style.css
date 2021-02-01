@@ -1,0 +1,119 @@
+
+.wbdv-cm-body{
+    background-color:#4d4d4d;
+}
+
+.wbdv-sticky-top {
+    background-color:#1a1a1a;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    white-space: nowrap;
+    color:white;
+}
+
+
+.wbdv-nav-hbg-logo{
+    left: 20px;
+    top: 4px;
+
+
+}
+.wbdv-nav-title {
+    font-weight:bold;
+    font-size: 20px;
+    top:4px;
+    color:white;
+    display:inline-block;
+}
+
+.wbdv-nav-plus-logo{
+    top:4px;
+    right:15px;
+}
+
+
+
+.wbdv-header-top{
+    background-color:#333333;
+    /*font-size: 15px;*/
+    position: fixed;
+    top:58px;
+    width: 100%;
+    padding:25px;
+    z-index: 1;
+    white-space: nowrap;
+    color:white;
+}
+
+.wbdv-header-text{
+    z-index:3;
+    font-size: 15px;
+    position: relative;
+}
+
+.wbdv-header-title{
+    top:-20px;
+    color:white;
+    display:inline-block;
+}
+.wbdv-header-belong{
+    top:-20px;
+    color:white;
+    display:inline-block;
+}
+.wbdv-header-modified{
+    top:-20px;
+    color:white;
+    display:inline-block;
+}
+.wbdv-header-view{
+    right:0px;
+    top:-20px;
+    color:white;
+    display:inline-block;
+}
+
+
+.wbdv-container-position{
+    position: relative;
+    top:90px;
+}
+
+
+.wbdv-date-label{
+    color:white;
+}
+
+.wbdv-cell-background{
+    padding: 10px;
+    background-color: #808080;
+    border-style: solid;
+    border-width:4px;
+    border-color:  #666666;
+}
+
+.wbdv-cell-file-logo{
+    color:white;
+}
+
+.wbdv-cell-owned-name{
+    color:white;
+}
+.wbdv-cell-last-modified-date{
+    color:white;
+}
+.wbdv-cell-delete{
+    right: 0px;
+    color:white;
+}
+
+
+.wbdv-bottom-plus{
+    color:white;
+    text-align:right;
+    right:60px;
+    bottom: 30px;
+    z-index:1000;
+}
