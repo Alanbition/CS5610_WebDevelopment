@@ -1,0 +1,72 @@
+.wbdv-profile-body{
+    background-color:#4d4d4d;
+}
+.wbdv-profile-title{
+    color:white;
+}
+
+.wbdv-username-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-username-input{
+    background-color:#cccccc;
+}
+
+.wbdv-password-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-password-input{
+    background-color:#cccccc;
+}
+
+.wbdv-phone-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-phone-input{
+    background-color:#cccccc;
+}
+
+.wbdv-email-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-email-input{
+    background-color:#cccccc;
+}
+
+.wbdv-role-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-role-input{
+    background-color:#cccccc;
+}
+
+.wbdv-dob-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-dob-input{
+    background-color:#cccccc;
+}
+
+.wbdv-btn-update{
+    background-color:#e67300;
+    border:0px;
+    color:white;
+}
+
+.wbdv-btn-logout{
+    background-color:#e67300;
+    border:0px;
+    color:white;
+}
