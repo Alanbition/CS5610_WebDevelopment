@@ -1,6 +1,3 @@
-// var titleFld
-// var $seatsFld
-// var $semesterFld
 var usernameFld
 var passwordFld
 var firstNameFld
@@ -15,7 +12,6 @@ var userService = new UserServiceClient()
 var users = [];
 
 function createUser(user) {
-    console.log(user.username)
     userService.createUser(user)
         .then(function (actualUser) {
             console.log(actualUser.username)
@@ -23,11 +19,6 @@ function createUser(user) {
             renderUsers(users)
         })
 }
-
-// createCourse({title: 'CS1111', seats: 11, semester: 'Fall'})
-// createCourse({title: 'CS2222', seats: 22, semester: 'Fall'})
-// createCourse({title: 'CS3333', seats: 33, semester: 'Fall'})
-// createCourse({title: 'CS4444', seats: 44, semester: 'Fall'})
 
 var selectedUser = null
 function selectUser(event) {
@@ -56,24 +47,25 @@ function deleteUser(event) {
             renderUsers(users)
         })
 }
-
+// <a  class="fas fa-times fa-2x wbdv-delete float-right wbdv-btns" id="${i}" role="button"></a>
+// <a  class="fas fa-edit fa-2x wbdv-select float-right wbdv-btns" id="${user._id}" role="button"></a>
 function renderUsers(users) {
     theTableBody.empty()
     for (var i = 0; i < users.length; i++) {
         var user = users[i]
         console.log(user.username)
         theTableBody
-            .prepend(`
+            .append(`
     <tr>
-        <td>${user.username}</td>
-        <td>${user.password}</td>
-        <td>${user.firstName}</td>
-        <td>${user.lastName}</td>
-        <td>${user.role}</td>
-        <td>
-            <a  class="fas fa-times fa-2x wbdv-delete" id="${i}" role="button"></a>
-            <a  class="fas fa-edit fa-2x wbdv-select" id="${user._id}" role="button"></a>
-        </td>
+        <td class="text-center wbdv-user-info-text">${user.username}</td>
+        <td class="text-center wbdv-user-info-text">&nbsp;</td>
+        <td class="text-center wbdv-user-info-text">${user.firstName}</td>
+        <td class="text-center wbdv-user-info-text">${user.lastName}</td>
+        <td class="text-center wbdv-user-info-text">${user.role}</td>
+            <td><span class="float-right" style="white-space: nowrap">
+                <i class="fas fa-times fa-2x wbdv-delete wbdv-btns" id="${i}"></i>
+                <i class="fas fa-edit fa-2x wbdv-select wbdv-btns" id="${user._id}"></i>
+            </span></td>
     </tr>
   `)
     }
@@ -82,25 +74,28 @@ function renderUsers(users) {
     jQuery(".wbdv-select")
         .click(selectUser)
 }
-// renderCourses(courses)
+
 
 function updateUser() {
-    console.log(selectedUser)
     selectedUser.username = usernameFld.val()
     selectedUser.password = passwordFld.val()
     selectedUser.firstName = firstNameFld.val()
     selectedUser.lastName = lastNameFld.val()
     selectedUser.role = roleFld.val()
-    selectedUser = users.find(user => user._id === theId)
+    // selectedUser = users.find(user => user._id === theId)
     userService.updateUser(selectedUser._id, selectedUser)
         .then(function (status) {
-            var index = users.findIndex(user => user._id === selectUser._id)
+            var index = users.findIndex(user => user._id === selectedUser._id)
             users[index] = selectedUser
             renderUsers(users)
         })
+    usernameFld.val("")
+    passwordFld.val("")
+    firstNameFld.val("")
+    lastNameFld.val("")
 }
 
-function init() {
+function main() {
     usernameFld = $(".wbdv-username-fld")
     passwordFld = $(".wbdv-password-fld")
     firstNameFld = $(".wbdv-firstName-fld")
@@ -132,4 +127,4 @@ function init() {
             renderUsers(users)
         })
 }
-jQuery(init)
+jQuery(main)
