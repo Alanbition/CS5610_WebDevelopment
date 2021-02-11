@@ -8,7 +8,6 @@ var theTableBody
 var $updateBtn
 var $removeBtn
 var userService = new UserServiceClient()
-
 var users = [];
 
 function createUser(user) {
@@ -58,7 +57,7 @@ function renderUsers(users) {
             .append(`
     <tr>
         <td class="text-center wbdv-user-info-text">${user.username}</td>
-        <td class="text-center wbdv-user-info-text">&nbsp;</td>
+        <td class="text-center wbdv-user-info-text">******</td>
         <td class="text-center wbdv-user-info-text">${user.firstName}</td>
         <td class="text-center wbdv-user-info-text">${user.lastName}</td>
         <td class="text-center wbdv-user-info-text">${user.role}</td>

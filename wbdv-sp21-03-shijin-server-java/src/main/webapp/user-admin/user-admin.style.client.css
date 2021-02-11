@@ -13,14 +13,16 @@
 
 .table{
     /*border:  #737373 solid 2px;*/
+    /*padding: 2px;*/
+    margin: 2px;
 }
 
 .table tr{
     border:  #737373 solid 2px;
+    /*border: white solid 2px;*/
 }
 
 .table td{
-
 }
 
 .wbdv-input{
