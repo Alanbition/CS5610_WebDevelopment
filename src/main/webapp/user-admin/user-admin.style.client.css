@@ -1,0 +1,39 @@
+.wbdv-body{
+    background-color:#4d4d4d;
+}
+
+.wbdv-header{
+    color:#e67300;
+}
+
+.wbdv-table-title{
+    color:white;
+    font-size: 20px;
+}
+
+.table{
+    /*border:  #737373 solid 2px;*/
+    /*padding: 2px;*/
+    margin: 2px;
+}
+
+.table tr{
+    border:  #737373 solid 2px;
+    /*border: white solid 2px;*/
+}
+
+.table td{
+}
+
+.wbdv-input{
+    background-color:#cccccc;
+}
+
+.wbdv-btns{
+    color:#e67300;
+}
+
+.wbdv-user-info-text{
+    color:white;
+    font-size: 20px;
+}

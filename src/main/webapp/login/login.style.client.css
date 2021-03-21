@@ -1,0 +1,43 @@
+.wbdv-sign-in-body{
+    background-color:#4d4d4d;
+}
+
+.wbdv-sign-in-title{
+    color:white;
+}
+
+.wbdv-username-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-password-font{
+    font-size:20px;
+    color:white;
+}
+
+.wbdv-username-input{
+    background-color:#cccccc;
+}
+
+.wbdv-password-input{
+    background-color:#cccccc;
+}
+
+.wbdv-btn-login{
+    background-color:#e67300;
+    border:0px;
+    color:white;
+}
+
+.wbdv-forget-label{
+    color:#e67300;
+}
+
+.wbdv-cancel-label{
+    color:#e67300;
+}
+
+.wbdv-signup-label{
+    color:#e67300;
+}

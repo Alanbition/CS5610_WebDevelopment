@@ -1,0 +1,21 @@
+.wbdv-index-body{
+    background-color:#4d4d4d;
+}
+
+.wbdv-index-title{
+    color:white;
+}
+
+.container{
+    padding-top: 58px;
+}
+
+.wbdv-btn-link{
+    width:40%;
+    background-color:#e67300;
+    border-color:#4d4d4d;
+    border-style: solid;
+    border-width:10px;
+    padding:10px;
+    color:white;
+}
