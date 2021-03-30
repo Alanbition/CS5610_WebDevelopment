@@ -1,9 +1,16 @@
 package com.example.wbdvsp2103shijinserverjava.models;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String type;
     private Integer widgetOrder;
     private String text;
@@ -16,6 +23,7 @@ public class Widget {
     private String style;
     private String value;
     private String topicId;
+    private Boolean listOrdered;
 
     public String getTopicId() {
         return topicId;
@@ -25,6 +33,44 @@ public class Widget {
         this.topicId = topicId;
     }
 
+    public Boolean getListOrdered() {
+        return listOrdered;
+    }
+    public void setListOrdered(Boolean listOrdered){
+        this.listOrdered = listOrdered;
+    }
+
+    public String getSrc() {
+        return src;
+    }
+
+    public void setSrc(String src) {
+        this.src = src;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getWidth() {
+        return width;
+    }
+
+    public void setWidth(Integer width) {
+        this.width = width;
+    }
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
 
 
     public Long getId() {
@@ -62,11 +108,15 @@ public class Widget {
     public Widget() {
     }
 
-    public Widget(Long id, String topicId, String type, Integer size, String text) {
+    public Widget(Long id, String topicId, String type, Integer size, String text, String src, Integer width, Integer height, Boolean listOrdered) {
         this.id = id;
         this.topicId = topicId;
         this.type = type;
         this.size = size;
         this.text = text;
+        this.src = src;
+        this.width = width;
+        this.height = height;
+        this.listOrdered = listOrdered;
     }
 }
