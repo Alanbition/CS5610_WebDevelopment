@@ -50,7 +50,6 @@ public class WidgetService {
 //        return widgets;
     }
 
-
     public Widget findWidgetById(Long id) {
         return repository.findWidgetById(id);
 //        for(Widget w: widgets) {

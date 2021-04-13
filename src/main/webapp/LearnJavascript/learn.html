@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Javascript</title>
+    <style type="text/css">
+        #box1{
+            width:200px;
+            height:200px;
+            background-color:red;
+        }
+        .box {
+            box-sizing: border-box;
+            width: 100px;
+            height: 50px;
+            line-height: 48px;
+            text-align: center;
+            font-size: 16px;
+            border: solid lightblue;
+            background: lightcyan;
+        }
+        /*定位*/
+        /*.box {*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    margin-top: -25px;*/
+        /*    margin-left: -50px;*/
+        /*}*/
+
+        /*.box{*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    bottom: 0;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*body{*/
+        /*    position: relative;*/
+        /*}*/
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+    </style>
+
+    <button id = "btn01" >Click</button>
+    <button id = "prev" >prev</button>
+    <button id = "nxt" >nxt</button>
+    <p id="info"></p>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="des">
+
+
+    <script type="text/javascript">
+        // alert("Test learning")
+        document.write("test Learnming")
+        console.log()
+
+
+    </script>
+    <script type="text/javascript" src="learn.js"></script>
+    <script type="text/javascript">
+        // var btn = document.getElementById("btn")
+        //
+        // btn.innerHTML = "New BTN";
+        // btn.onclick = function(){alert('text')};
+        window.onload = function(){
+            var img = document.getElementsByTagName("img")[0]
+
+            var imgArr = ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png", "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"]
+            var index = 0;
+            var prev= document.getElementById("prev");
+            var nxt = document.getElementById("nxt");
+            var info = document.getElementById("info")
+
+            prev.onclick = function(){
+                index--;
+                img.src=imgArr[index];
+                info.innerHTML = index;
+            };
+            nxt.onclick = function(){
+                index++;
+                img.src=imgArr[index];
+                info.innerHTML = index;
+
+            };
+            var div = document.querySelector(".title")
+
+            myClick("btn01", function(){
+               var li = document.createElement("li");
+
+               var gzText = document.createTextNode("GuangZhou")
+                li.appendChild(gzText)
+                var city = document.getElementById("city");
+               city.appendChild(li);
+
+            });
+            function myClick(idStr, fun) {
+                var btn = document.getElementById(idStr);
+                btn.onclick = fun;
+
+            }
+
+            var addEmpButton = document.getElementById("addEmpButton");
+            addEmpButton.onclick = function(){
+                var name = document.getElementById("empName").value;
+                var tr = document.createElement("tr");
+                // var nameTd = document.createElement("td");
+                //
+                // var a = document.createElement("a")
+                //
+                // var nameText = document.createTextNode(name);
+                // nameTd.appendChild(nameText)
+                // tr.appendChild(nameTd)
+                //
+
+                tr.innerHTML = "<td>" + name +  "</td>";
+                var employeeTable = document.getElementById("employeeTable")
+                employeeTable.appendChild(tr);
+            }
+
+            // var box1 = document.getElementById("box1");
+            //
+            // var btn01 = document.getElementById("btn01");
+            //
+            // btn01.onclick = function(){
+            //     box1.style.width = "300px";
+            //     box1.style.height = "300px";
+            //
+            // }
+            //
+            // let items = document.getElementsByClassName('item');
+            // for (let i=0; i<items.length; i++){
+            //     items[i].onclick = function(){
+            //         items[i].style.background = 'pink'
+            //
+            //     }
+            // }
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="total">
+        <div class="inner">
+            <p>City</p>
+            <ul id = "city">
+                <li id="bj">Beijing</li>
+                <li id="sh">Shanghai</li>
+                <li id="tk">Tokyo</li>
+                <li id="so">Soul</li>
+            </ul>
+        </div>
+    </div>
+    <table id="employeeTable">
+        <tr>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td colspan="2" align="center">
+                <button id="addEmpButton" value = "abc">
+                    Submit
+                </button>
+
+            </td>
+        </tr>
+        <table>
+            <tr>
+                <td class="word">name: </td>
+                <td class="inp">
+                    <input type="text" name="empName" id="empName" />
+                </td>
+            </tr>
+        </table>
+
+    </table>
+    <div id="box1"></div>
+    <div class="container">
+        <h2 class="page-header">Change Color</h2>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class = 'box'>
+
+    </div>
+
+</body>
+</html>
